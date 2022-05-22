@@ -1,0 +1,68 @@
+// 设置变量
+@bg-color:#b7d4a8;
+// 清除默认样式
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font:bold 20px "Courier"
+}
+// 设置主窗口
+#main{
+    width: 360px;
+    height: 420px;
+    background-color: @bg-color;
+    margin: 100px auto;
+    border: 10px solid black;
+    border-radius: 40px;
+    // 开启弹性盒布局
+    display: flex;
+    // 主轴方法
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    #stage{
+        position: relative;
+        width: 304px;
+        height: 304px;
+        border: 2px solid black;
+        // 设置🐍的样式
+        #snake{
+            &>div{
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+                border: 1px solid @bg-color;
+                // 开启绝对定位
+                position: absolute;
+            }
+        }
+        // 设置食物
+        #food{
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: space-between;
+            &>div{
+                width: 4px;
+                height: 4px;
+                background-color: black;
+                transform:rotate(45deg);
+            }
+        }
+    }
+    #score-panel{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+

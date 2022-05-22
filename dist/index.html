@@ -1,0 +1,40 @@
+<!-- 模板html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪食蛇</title>
+<script defer src="bundle.js"></script></head>
+<body>
+    <!-- 设置游戏主容器 -->
+    <div id="main">
+        <!-- 设置游戏的舞台 -->
+        <div id="stage">
+            <!-- 设置🐍 -->
+            <div id="snake">
+                <!-- snake内部的div 表示蛇的各部分 -->
+                <div></div>
+            </div>
+            <!-- 设置食物 -->
+            <div id="food">
+                <!-- 添加4个div来设置食物的样式 -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- 设置游戏记分牌 -->
+        <div id="score-panel">
+            <div>
+                SCORE:<span id="score">0</span>
+            </div>
+            <div>
+                level:<span id="level">1</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
